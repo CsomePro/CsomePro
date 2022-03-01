@@ -1,5 +1,8 @@
 ### Hi there 👋
 
+This is Csome!
+这里是Csome！
+
 <!--
 **CsomePro/CsomePro** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 
