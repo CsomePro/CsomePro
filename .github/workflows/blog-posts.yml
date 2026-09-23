@@ -1,0 +1,21 @@
+name: Latest Blog Posts
+
+on:
+  schedule:
+    # Runs every day at 03:23 (Asia/Shanghai)
+    - cron: '23 19 * * *'
+  workflow_dispatch:
+jobs:
+  update-readme-with-blog:
+    name: Update README with Latest Blog Posts
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: gautamkrishnar/blog-post-workflow@v1
+        with:
+          feed_list: "https://blog.csome.cc/rss.xml"
+          max_post_count: 5
+          committer_username: "CsomePro"
+          committer_email: "70513501+CsomePro@users.noreply.github.com"
