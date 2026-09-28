@@ -1,9 +1,7 @@
 name: Latest Blog Posts
 
+# Triggered by csome-blog's deploy workflow after each site deploy.
 on:
-  schedule:
-    # Runs every day at 03:23 (Asia/Shanghai)
-    - cron: '23 19 * * *'
   workflow_dispatch:
 jobs:
   update-readme-with-blog:
